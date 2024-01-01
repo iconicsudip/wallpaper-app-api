@@ -18,43 +18,42 @@ const storage = getStorage(app);
 
 
 export const getAllWallpapers = async (req: Request, res: Response, next: NextFunction) => {
-    // try {
-    //     let limit = isNaN(Number(req.query.limit)) ? undefined : Number(req.query.limit);
-    //     let page = isNaN(Number(req.query.page)) ? undefined : Number(req.query.page);
-    //     let query = req.query.query ? String(req.query.query) : "all";
-    //     let category = req.query.category ? String(req.query.category) : "all";
-    //     const totalWallpapers = await Wallpaper.countDocuments({});
-    //     if (!limit && !page) {
-    //         const allWallpapers = await fetchAllWallpapers(query, category)
-    //         const finalWallpapers = {
-    //             data: allWallpapers,
-    //             totalWallpapers: totalWallpapers,
-    //         }
-    //         return generateResponse(res, 200, finalWallpapers, "Successfully fetched all wallpapers");
-    //     } else {
-    //         page = page ?? 1;
-    //         limit = limit ?? 10;
-    //         const allWallpapers = await fetchPaginatedWallpapers(page ?? 1, limit ?? 10, query, category);
-    //         const totalPages = Math.ceil(totalWallpapers / limit);
+    try {
+        let limit = isNaN(Number(req.query.limit)) ? undefined : Number(req.query.limit);
+        let page = isNaN(Number(req.query.page)) ? undefined : Number(req.query.page);
+        let query = req.query.query ? String(req.query.query) : "all";
+        let category = req.query.category ? String(req.query.category) : "all";
+        const totalWallpapers = await Wallpaper.countDocuments({});
+        if (!limit && !page) {
+            const allWallpapers = await fetchAllWallpapers(query, category)
+            const finalWallpapers = {
+                data: allWallpapers,
+                totalWallpapers: totalWallpapers,
+            }
+            return generateResponse(res, 200, finalWallpapers, "Successfully fetched all wallpapers");
+        } else {
+            page = page ?? 1;
+            limit = limit ?? 10;
+            const allWallpapers = await fetchPaginatedWallpapers(page ?? 1, limit ?? 10, query, category);
+            const totalPages = Math.ceil(totalWallpapers / limit);
 
-    //         const finalWallpapers = {
-    //             data: allWallpapers,
-    //             page: page ?? 1,
-    //             limit: limit ?? 10,
-    //             totalPages: totalPages,
-    //             totalWallpapers: totalWallpapers,
-    //             isNextPage: totalPages > 0 && page < totalPages ? true : false,
-    //             isPrevPage: totalPages > 0 && page > 1 ? true : false,
-    //             prevPage: totalPages > 0 && page > 1 ? page - 1 : null,
-    //             nextPage: totalPages > 0 && page < totalPages ? page + 1 : null,
-    //         }
-    //         return generateResponse(res, 200, finalWallpapers, "Successfully fetched all wallpapers"
-    //         );
-    //     }
-    // } catch (error) {
-    //     next(error);
-    // }
-    return response.send("Hello");
+            const finalWallpapers = {
+                data: allWallpapers,
+                page: page ?? 1,
+                limit: limit ?? 10,
+                totalPages: totalPages,
+                totalWallpapers: totalWallpapers,
+                isNextPage: totalPages > 0 && page < totalPages ? true : false,
+                isPrevPage: totalPages > 0 && page > 1 ? true : false,
+                prevPage: totalPages > 0 && page > 1 ? page - 1 : null,
+                nextPage: totalPages > 0 && page < totalPages ? page + 1 : null,
+            }
+            return generateResponse(res, 200, finalWallpapers, "Successfully fetched all wallpapers"
+            );
+        }
+    } catch (error) {
+        next(error);
+    }
 };
 
 export const createWallpapers = async (req: Request, res: Response, next: NextFunction) => {
