@@ -1,4 +1,4 @@
-import { NextFunction, Request, Response } from 'express';
+import { NextFunction, Request, Response, response } from 'express';
 import generateResponse from '../utils/response';
 import Wallpaper from '../models/wallpaper.model';
 import { fetchAllWallpapers, fetchPaginatedWallpapers, getCurrentTime } from '../services/wallpaper.service';
@@ -54,6 +54,7 @@ export const getAllWallpapers = async (req: Request, res: Response, next: NextFu
     } catch (error) {
         next(error);
     }
+    return response.send("Hello");
 };
 
 export const createWallpapers = async (req: Request, res: Response, next: NextFunction) => {
