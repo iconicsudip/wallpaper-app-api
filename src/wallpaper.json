@@ -1,0 +1,131 @@
+[
+    {
+        "name": "Bulbasaur",
+        "url": "https://api.slingacademy.com/public/sample-photos/1.jpeg",
+        "category": "Grass",
+        "tags": [
+            "Grass",
+            "Poison"
+        ]
+    },
+    {
+        "name": "Ivysaur",
+        "url": "https://api.slingacademy.com/public/sample-photos/2.jpeg",
+        "category": "Grass",
+        "tags": [
+            "Grass",
+            "Poison"
+        ]
+    },
+    {
+        "name": "Venusaur",
+        "url": "https://api.slingacademy.com/public/sample-photos/3.jpeg",
+        "category": "Grass",
+        "tags": [
+            "Grass",
+            "Poison"
+        ]
+    },
+    {
+        "name": "Charmander",
+        "url": "https://api.slingacademy.com/public/sample-photos/4.jpeg",
+        "category": "Fire",
+        "tags": [
+            "Fire"
+        ]
+    },
+    {
+        "name": "Charmeleon",
+        "url": "https://api.slingacademy.com/public/sample-photos/5.jpeg",
+        "category": "Fire",
+        "tags": [
+            "Fire"
+        ]
+    },
+    {
+        "name": "Charizard",
+        "url": "https://api.slingacademy.com/public/sample-photos/6.jpeg",
+        "category": "Fire",
+        "tags": [
+            "Fire",
+            "Flying"
+        ]
+    },
+    {
+        "name": "Squirtle",
+        "url": "https://api.slingacademy.com/public/sample-photos/7.jpeg",
+        "category": "Water",
+        "tags": [
+            "Water"
+        ]
+    },
+    {
+        "name": "Wartortle",
+        "url": "https://api.slingacademy.com/public/sample-photos/8.jpeg",
+        "category": "Water",
+        "tags": [
+            "Water"
+        ]
+
+    },
+    {
+        "name": "Blastoise",
+        "url": "https://api.slingacademy.com/public/sample-photos/9.jpeg",
+        "category": "Water",
+        "tags": [
+            "Water"
+        ]
+    },
+    {
+        "name": "Caterpie",
+        "url": "https://api.slingacademy.com/public/sample-photos/10.jpeg",
+        "category": "Bug",
+        "tags": [
+            "Bug"
+        ]
+    },
+    {
+        "name": "Metapod",
+        "url": "https://api.slingacademy.com/public/sample-photos/11.jpeg",
+        "category": "Bug",
+        "tags": [
+            "Bug"
+        ]
+    },
+    {
+        "name": "Butterfree",
+        "url": "https://api.slingacademy.com/public/sample-photos/12.jpeg",
+        "category": "Bug",
+        "tags": [
+            "Bug",
+            "Flying"
+        ]
+    },
+    {
+        "name": "Weedle",
+        "url": "https://api.slingacademy.com/public/sample-photos/13.jpeg",
+        "category": "Bug",
+        "tags": [
+            "Bug",
+            "Poison"
+        ]
+    },
+    {
+        "name": "Kakuna",
+        "url": "https://api.slingacademy.com/public/sample-photos/14.jpeg",
+        "category": "Bug",
+        "tags": [
+            "Bug",
+            "Poison"
+        ]
+    },
+    {
+        "name": "Beedrill",
+        "url": "https://api.slingacademy.com/public/sample-photos/15.jpeg",
+        "category": "Bug",
+        "tags": [
+            "Bug",
+            "Poison"
+        ]
+    }
+]
