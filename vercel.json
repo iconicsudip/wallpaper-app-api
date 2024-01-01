@@ -1,6 +1,6 @@
 {
-    "version": 1,
+    "version": 2,
     "name": "wallpaper-app-api",
     "builds": [{ "src": "src/index.ts", "use": "@vercel/node" }],
-    "routes": [{ "src": "/src/(.*)", "dest": "/src/index.ts" }]
+    "routes": [{ "src": "/(.*)", "dest": "/src/index.ts" }]
 }
